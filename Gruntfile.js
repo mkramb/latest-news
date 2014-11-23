@@ -20,6 +20,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('bower', [ 'shell:bower' ]);
   grunt.registerTask('run', [ 'connect:server:keepalive' ]);
+  grunt.registerTask('wgt', [ 'compress:wgt' ]);
 
   grunt.registerTask('dev', [
     'clean',

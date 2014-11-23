@@ -7,6 +7,7 @@ module.exports = {
         'build',
         'bower',
         'watch',
+        'wgt',
         'run'
       ]
     }

@@ -18,5 +18,6 @@ grunt run
 ### Production
 
 ```sh
+grunt wgt
 grunt build
 ```

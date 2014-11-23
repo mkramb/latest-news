@@ -1,6 +1,9 @@
 module.exports = {
   app: {
-    src: '<%= paths.root %>/app/index.html',
+    src: [
+      '<%= paths.root %>/app/index.html',
+      '<%= paths.root %>/app/config.xml'
+    ],
     dest: '<%= paths.root %>/public/',
     expand: true,
     flatten: true

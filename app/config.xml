@@ -1,0 +1,11 @@
+<widget xmlns="http://www.w3.org/ns/widgets"
+  id="http://wookie.apache.org/widgets/latestnews"
+  version="0.1"
+  width="640"
+  height="820"
+>
+  <name>latestnews</name>
+  <content src="index.html"/>
+  <author>Mitja Kramberger</author>
+  <access origin="http://pipes.yahoo.com"/>
+</widget>
