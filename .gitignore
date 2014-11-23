@@ -1,4 +1,4 @@
-client/library/
+app/library/
 node_modules/
 .DS_Store
 public/

@@ -1,10 +1,10 @@
 'use strict';
 
 function stripHtml(html) {
-   var div = document.createElement('div');
-   div.innerHTML = html;
+  var div = document.createElement('div');
+  div.innerHTML = html;
 
-   return (
+  return (
     div.textContent || div.innerText || ''
   );
 }
