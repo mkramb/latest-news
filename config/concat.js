@@ -4,7 +4,8 @@ module.exports = {
       '<%= paths.root %>/app/library/jquery/dist/jquery.js',
       '<%= paths.root %>/app/library/bootstrap/dist/js/bootstrap.js',
       '<%= paths.root %>/app/library/underscore/underscore.js',
-      '<%= paths.root %>/app/library/backbone/backbone.js'
+      '<%= paths.root %>/app/library/backbone/backbone.js',
+      '<%= paths.root %>/app/library/mustache/mustache.js'
     ],
     dest: '<%= paths.root %>/public/scripts/lib.js'
   },

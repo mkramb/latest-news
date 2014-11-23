@@ -1,20 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
   <meta charset="utf-8" />
-  <title>latest-news</title>
-
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
+  <title>Latest news</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/lib.css">
   <link rel="stylesheet" type="text/css" href="css/app.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
 </head>
 <body>
 
-  <h1>Testing</h1>
+  <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#/">Latest news</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#/"><span class="glyphicon glyphicon-star"></span> Top 10</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="content" class="container">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+        Loading latest data ...
+      </div>
+    </div>
+  </div>
+
+  <script id="listing" type="text/html">
+    <div class="listing">
+      <div class="list-group">
+        {{#news}}
+          <a href="#/details/{{id}}" class="list-group-item">
+            {{#image}}<div class="pull-left"><img src="{{image}}" class="small"></div>{{/image}}
+            <div class="pull-left"><h4 class="list-group-item-heading">{{title}}</h4></div>
+            <div class="clearfix"></div>
+          </a>
+        {{/news}}
+      </div>
+    </div>
+  </script>
+
+  <script id="detail" type="text/html">
+    <div class="detail">
+      <ol class="breadcrumb">
+        <li><a href="#/">Listing</a></li>
+        <li class="active">{{title}}</li>
+      </ol>
+      <div class="link">
+        <span class="glyphicon glyphicon-share-alt"></span>
+        <a href="{{link}}" title="{{link}}" target="_blank">{{link}}</a>
+      </div>
+      <p>
+        {{#image}}<div class="pull-left"><img src="{{image}}"></div>{{/image}}
+        {{description}}
+      </p>
+      <div class="clearfix"></div>
+    </div>
+  </script>
+
+  <script id="error" type="text/html">
+    <div class="alert alert-danger" role="alert">{{title}}</div>
+  </script>
 
   <script src="scripts/lib.js"></script>
   <script src="scripts/app.js"></script>
