@@ -14,7 +14,10 @@ var AppRouter = Backbone.Router.extend({
       itemId
     );
 
-    if (id < 0 || id >= 10) {
+    if (
+      ( _.isNaN(id) || !_.isNumber(id) ) ||
+      ( id < 0 || id >= 10 )
+    ) {
       this.navigate('#/');
       return;
     }
