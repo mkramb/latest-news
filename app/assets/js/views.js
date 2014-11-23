@@ -35,7 +35,6 @@ var NewsView = Backbone.View.extend({
 
     this.collection.fetch({
       error: this.onError,
-      timeout: 5000,
       reset: true
     });
   },
